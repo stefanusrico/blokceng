@@ -10,11 +10,11 @@ const server = http.createServer(app)
 
 const bodyParser = require("body-parser")
 
-const testRoutes = require("./routes/test_routes")
+const mahasiswaRoutes = require("./routes/mahasiswa")
 
 initializeFirebaseApp()
 app.use(express.json())
-app.use("/api", testRoutes)
+app.use("/api", mahasiswaRoutes)
 
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
